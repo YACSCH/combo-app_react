@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { GetToken } from "../api/getData";
 import axios from "axios";
 
 const ComboBoxes = () => {
@@ -38,8 +39,8 @@ const ComboBoxes = () => {
   useEffect(() => {
       axios.get("https://beta.api.cne.cl/api/v3/combustible/vehicular/estaciones/", {
         headers: {
-              Authorization:
-                "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYmV0YS5hcGkuY25lLmNsL2FwaS9sb2dpbiIsImlhdCI6MTY5MDc1NzE2MCwiZXhwIjoxNjkwNzYwNzYwLCJuYmYiOjE2OTA3NTcxNjAsImp0aSI6ImFJYm53dThpOUdGQW9TSDQiLCJzdWIiOiIyNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.VtdCB9R-2USByo2slBpneLzFKbTkNR0zIsn32EeBvHU",
+              Authorization: GetToken()
+                ,
             },
           }
         )
