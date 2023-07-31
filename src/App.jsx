@@ -1,4 +1,4 @@
-import Combobox from "./components/combobox"
+import Combobox from "./components/Combobox"
 
 function App() {
 
